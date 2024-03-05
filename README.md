@@ -58,7 +58,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 14.  default username and password will be admin and admin restpectively 
 15.  configure sonar with genkins
      * sonarqube ->myaccound ->security -> generate token -> copy the token
-     * go to Jenkins dashboard ->manage jenkins -> manage credentials ->system >global credentails and add it
+     * go to Jenkins dashboard ->manage jenkins -> manage credentials ->system >global credentails select type as secret text and add it
    
 16.  install docker
 
