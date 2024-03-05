@@ -55,12 +55,15 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 
 12.  By default sonarserver will run on port 9000
 13.  open port 9000 on aws ec2 instance inbound rules
-14.  default username and password will be admin and admin restpectively 
-15.  configure sonar with genkins
+14.  default username and password will be admin and admin restpectively
+15.  after your first login change the password
+16.  install Sonar plugin in jenkins
+17.  go to Jenkins dashboard ->manage jenkins -> manage plugins ->system >available plugin -> SonarScanner
+18.  configure sonar with genkins
      * sonarqube ->myaccound ->security -> generate token -> copy the token
      * go to Jenkins dashboard ->manage jenkins -> manage credentials ->system >global credentails select type as secret text and add it
    
-16.  install docker
+19.  install docker
 
 <pre>
   sudo apt update
@@ -157,7 +160,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
       spec: {}
     </pre>
     <pre>kubectl get pods</pre>
-21.  in order to use argocd externally edit the argocd server service type to NodePort
+21.  in order to use argocd externally edit the argocd server service type to LoadBalancer
 
 <pre>kubectl edit svc example-argocd-server</pre>
 
@@ -169,7 +172,9 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
     * go to Jenkins dashboard ->manage jenkins -> manage credentials ->system >global credentails -> type as username and password and add provide credentials
 
 24.  login to argocd
-25.  create new application by providing required details
-26.  sync the application
+25.  argocd username will be admin and password will be available under kubernetes secrets with secret name argocd-initial-admin-secret
+26.  create new application by providing required details
+27.  sync the application
+28.  login to application
      
   
