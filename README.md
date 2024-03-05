@@ -152,7 +152,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
       kind: ArgoCD
       metadata:
         name: example-argocd
-        lebels:
+        labels:
           example: basic
       spec: {}
     </pre>
